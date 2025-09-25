@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 jobs:
   snyk-sast-scan:
     steps:
@@ -16,4 +17,3 @@ jobs:
           orgname: ${{ vars.SNYK_ORG_NAME }}
           token: ${{ secrets.SNYK_SECRET }}
           language: LANGUAGE_GO
-          
